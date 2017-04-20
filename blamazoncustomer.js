@@ -17,8 +17,6 @@ var connection = mysql.createConnection({
 connection.connect(function(err) {
 	if(err) {
 		console.log(err);
-	// } else {
-	// 	console.log('connection successful!');
 	}
 });
 
@@ -28,7 +26,7 @@ function viewProducts() {
 		if (error) {
 	 		console.log(error);
 		} else {
-			console.log('Welcome to Blamazon!');
+			console.log('Welcome to Blamazon! Please browse our products below:');
 	 		for (var i = 0; i < response.length; i++) {
 	 			console.log('Product ID ' 
 	 				+ response[i].ID  + ' | ' 
@@ -65,28 +63,22 @@ function makeAnOrder() {
 			} else if (order.quantity > response[0].stock_quantity) {
 				console.log('Low stock!');
 			} else {
-				var stockUpdateQuery = 'UPDATE products SET stock_quantity = ? WHERE id= ?';
 
 				var newStock = response[0].stock_quantity - order.quantity;
-				console.log(newStock);
 
 				var orderPrice = order.quantity * response[0].price;
 
-				connection.query(stockUpdateQuery, [newStock, order.productID],
+				connection.query('UPDATE products SET stock_quantity = ? WHERE id= ?', [newStock, order.productID],
 					function (error, response) {
 						if (error) {
-					console.log('There was an error: ' + error);
-				 } else {
-					console.log('order placed! your total is $' + orderPrice);
-				}
-				});
-
+							console.log('There was an error: ' + error);
+						} else {
+							console.log('order placed! your total is $' + orderPrice);
+						}
+					});
 			}
 		});
 	});
 }
 
-
 viewProducts();
-
-// connection.end();
