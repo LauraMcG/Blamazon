@@ -1,0 +1,23 @@
+{
+  "name": "blamazon",
+  "version": "1.0.0",
+  "description": "node and SQL storefront app",
+  "main": "blamazoncustomer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LauraMcG/Blamazon.git"
+  },
+  "author": "Laura McGinn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LauraMcG/Blamazon/issues"
+  },
+  "homepage": "https://github.com/LauraMcG/Blamazon#readme",
+  "dependencies": {
+    "inquirer": "^3.0.6",
+    "mysql": "^2.13.0"
+  }
+}
