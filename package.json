@@ -2,7 +2,7 @@
   "name": "blamazon",
   "version": "1.0.0",
   "description": "node and SQL storefront app",
-  "main": "blamazoncustomer.js",
+  "main": "blamazonmanager.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,5 +19,8 @@
   "dependencies": {
     "inquirer": "^3.0.6",
     "mysql": "^2.13.0"
+  },
+  "engines": {
+    "node": "6.9.2"
   }
 }
