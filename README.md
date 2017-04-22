@@ -26,5 +26,5 @@ As a manager, users can view the full inventory, see which items are low in stoc
 - mySQL
 - nodeJS
 - npm packages
-	-mysql
-	-inquirer
+  - mysql
+  - inquirer
