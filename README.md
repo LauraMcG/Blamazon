@@ -9,16 +9,16 @@ Node.js and MySQL-based storefront platform.
 
 ## Blamazon Customer View (blamazoncustomer.js)
 
-![blamazon customer view](/images/blamazoncustomer.png)
+As a customer, users can view and purchase products. The user is presented with the full list of avaiable items, and then prompted to make a purchase with the product ID and quantity:
 
-As a customer, users can view and purchase products.
+![blamazon customer view](/images/blamazoncustomer.png)
 
 ## blamazonmanager.js
 
+As a manager, users can view the full inventory, see which items are low in stock, add inventory, and add new products. The below screenshots show all of these features in action:
+
 ![blamazon manager view 1](/images/blamazonmanager1.png)
 ![blamazon manager view 2](/images/blamazonmanager2.png)
-
-As a manager, users can view the full inventory, see which items are low in stock, add inventory, and add new products.
 
 ## Technologies Used
 
