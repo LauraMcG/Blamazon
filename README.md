@@ -6,7 +6,7 @@ Node.js and MySQL-based storefront platform.
 1. Copy the respository link and install to your drive.
 2. Add the Inquirer and MySQL node packages by running `npm install` in your console.
 3. Utilize `schema.sql` and `seeds.sql` to create a local SQL database.
-4. update `blamazoncustomer.js' and `blamazonmanager.js` with your user and password credentials (lines 12 & 13 and 10 & 11, respectively).
+4. Update lines 12 & 13 in `blamazoncustomer.js` and 10 & 11 in `blamazonmanager.js` with your user and password credentials.
 
 ## Blamazon Customer View (blamazoncustomer.js)
 
