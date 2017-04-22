@@ -11,3 +11,4 @@ stock_quantity INT (4) NOT NULL,
 PRIMARY KEY (id)
 );
 
+select * from products;

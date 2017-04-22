@@ -54,15 +54,17 @@ function makeAnOrder() {
 		}
 	]).then(function(order){
 		//once we know what item and how many, we'll run a query to pull all the info on the item in question
-		//we'll log any errors that appear
-		//then we'll check to make sure we have enough in stock. if not, we'll display an error.
-		//if we've got enough, we'll change the stock accordingly and display the amount owed.
+		
 		connection.query('SELECT * FROM products WHERE id = ?', [order.productID], function(error, response) {
 			if (error) {
+			//we'll log any errors that appear
 				console.log('There was an error: ' + error);
+
 			} else if (order.quantity > response[0].stock_quantity) {
+			//then we'll check to make sure we have enough in stock. if not, we'll display an error.
 				console.log('Low stock!');
 			} else {
+			//if we've got enough, we'll change the stock accordingly and display the amount owed.
 
 				var newStock = response[0].stock_quantity - order.quantity;
 
@@ -73,7 +75,7 @@ function makeAnOrder() {
 						if (error) {
 							console.log('There was an error: ' + error);
 						} else {
-							console.log('order placed! your total is $' + orderPrice);
+							console.log('Order placed! your total is $' + orderPrice);
 						}
 					});
 			}
@@ -81,4 +83,5 @@ function makeAnOrder() {
 	});
 }
 
+//initialize program on load
 viewProducts();

@@ -128,7 +128,7 @@ function blamazonManager () {
 		{
 			type: 'list',
 			name: 'command',
-			message: 'Welcoome to Blamazon! What would you like to do?',
+			message: 'Welcome to Blamazon! What would you like to do?',
 			choices: ['View Products', 'View Low Inventory', 'Add Inventory', 'Add New Product', 'Exit']
 		}
 	]).then(function(input) {

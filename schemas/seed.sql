@@ -15,4 +15,3 @@ VALUE
 ('Near Grog', 'Food and Beverage', 15.00, 40),
 ('Shovel', 'Home Improvement', 30.45, 12),
 ('Cheese Squiggles', 'Food and Beverage', 1.00, 50);
-
